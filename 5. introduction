@@ -1,0 +1,34 @@
+
+# 5. Import random + list of useful variables and lists for the whole program:
+
+import random
+wins = 0
+losses = 0
+counteragain = 0
+totalcounter = 0
+counterlist = []
+yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
+no = ['n', 'N', 'no', 'No', 'nO', 'NO']
+
+# Input name command + printing showing instructions function:
+
+name = input("Hello user. What is your name?: ")
+print()
+print("Hello", name+". I am the program that you will be versing in the")
+print("HIGHER OR LOWER GAME.")
+
+# Print showing introductions function:
+
+yes_no("Before we start, have you played this game before? y/n: ")
+
+# 'Play again' loop command: 
+
+againtwo = ("yes")
+while againtwo in yes:
+    counter = 0
+    dcounter = 0
+    errorcounter = -1
+
+# Print minor function on different outcomes:
+
+    againloop(counteragain)
