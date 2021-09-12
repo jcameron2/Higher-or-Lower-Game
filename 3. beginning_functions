@@ -1,0 +1,52 @@
+
+def yes_no(question):
+
+    # 3. Showing instructions function and creating loop:
+
+    valid = False
+    while not valid:
+
+        # Shows question. If the user says no, instructions are shown.
+
+        print()
+        playedbefore = input(question)
+        if playedbefore in no:
+            instructions()
+            playedbefore = ("yes")
+            print()
+            input("Please enter ANYTHING to begin: ")
+        if playedbefore in yes:
+            print()
+            print("Alright... here we go!")
+            break
+
+        # If the user doesn't input yes or no:
+
+        else:
+            invalid_input()
+
+    # Error correction loop commmands:
+
+def error_correction():
+
+    print()
+    print("Error! An integer was not inputted. Try again!")
+
+def invalid_input():
+
+    print()
+    print("Error! An invalid answer was inputted. Try again!")
+
+def reveal_secret():
+
+    # Reveals the secret number:
+
+    print()
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+    print("Unlucky", name+", my number was", x, "!!!")
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+
+    # Reveals the round's overall score:
+
+    print()
+    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter)
