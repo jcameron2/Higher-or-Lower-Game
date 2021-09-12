@@ -1,0 +1,31 @@
+
+            # 7. Inputting amount of lives: 
+
+                while errorcounter < 1 or errorcounter > 10:
+                    try:
+                        print()
+                        print("Please enter the amount of lives you will give yourself to")
+                        errorcounter = int(input("guess my number (between 1 to 10): "))
+                        if errorcounter < 1 or errorcounter > 10:
+                            print()
+                            print("Error! The amount of guesses can only be between 1 to 10.")
+                            print("Try again!")
+
+                    # If the user does not input an integer:
+
+                    except ValueError:
+                        print()
+                        print("Error! An integer was not inputted. Try again!")
+
+            # Identifying the user's selected mode:
+
+            counteragain = counteragain + 1
+            if mode != '0':
+                print()
+                print("Okay. INFINITE MODE has been activated. Now let's play", name+"!")
+            else:
+                print()
+                print("Alright", name+". Now let's play!")
+            finder = ()
+            guess = ()
+            guesslist = [""]
