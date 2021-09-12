@@ -1,6 +1,5 @@
 
     # 6. Inputting lower and upper boundary commands
-    # + Error correction loop function and number generator command:
 
     lower = 1
     upper = 0
@@ -10,21 +9,22 @@
             lower = int(input("Please enter a lower boundary integer: "))
             print()
             upper = int(input("Good, now please enter an upper boundary integer: "))
+
+         # Error correction loop and number generator command:
+
             if lower > upper:
-                print()
-                print("Uh oh! It looks like there is an error in the boundaries. Try again!")
+                invalid_input()
             if lower <= upper:
                 x = random.randint(lower, upper)
 
         # If the user does not input an integer:
 
         except ValueError:
-            print()
-            print("Uh oh! It looks like there is an error in the boundaries. Try again!")
+            error_correction()
             lower = 1
             upper = 0
 
-        # Inputting the amount of guesses you will give yourself:
+        # CALCUATING SECRET NUMBER + Entering preferred mode:
 
         if lower <= upper:
             print()
