@@ -1,0 +1,32 @@
+
+            # 11. If the guess is correct:
+
+                if guess == x:
+                    print()
+                    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+                    print("CORRECT! Congratulations... my number was", x, "!!!")
+                    wins = wins + 1
+
+            # If it took 1 attempt to guess number correctly + All its different outcomes:
+
+                    if counter == 1:
+                        if lower == upper:
+                            print()
+                            print("Strange, you guessed my number correctly with 1 attempt.")
+                            print()
+                            print("Aha! I see that both of your selected boundary numbers are equal.")
+                            print()
+                            print("You think you're so smart, don't you", name+"?")
+                        elif lower != upper:
+                            print()
+                            print("It took you 1 time to guess my number correctly!!! Wow!!!")
+                            print()
+                            print("I must say you got a bit lucky there", name+".")
+
+                # If it took more than 1 attempt to guess number correctly:
+
+                    if counter > 1:
+                        print()
+                        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+                        print("It took you", counter, "times to guess my number correctly!")
+                        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
