@@ -1,0 +1,31 @@
+
+            # 8. Loop function to 'try again' and inputting guess command:
+
+            againone = ("no")
+            while againone in no:
+                try:
+                    detector = 0
+                    totalcounter = totalcounter + 1
+                    dcounter = dcounter + 1
+                    counter = counter + 1
+                    print()
+                    guess = int(input("Go on, guess my number: "))
+
+                    # Searching for a same guess the user may have already inputted:
+                    
+                    guesslist.append(guess)
+                    for finder in guesslist:
+                        if detector < dcounter:
+                            detector = detector + 1
+                            if finder == guess:
+                                print()
+                                print("You already guessed that!!!")
+                                dcounter = dcounter - 1
+                                guesslist.remove(finder)
+
+                # If the user does not input an integer:
+
+                except ValueError:
+                    print()
+                    print("Error! An integer was not inputted. Try again!")
+                    dcounter = dcounter - 1
