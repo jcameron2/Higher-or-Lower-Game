@@ -1,5 +1,6 @@
 
-            # 8. Loop function to 'try again' and inputting guess command:
+            # 8. Loop function to 'try again' + inputting guess command
+            # + Resets all appropiate counter variables in a new round:
 
             againone = ("no")
             while againone in no:
@@ -26,6 +27,5 @@
                 # If the user does not input an integer:
 
                 except ValueError:
-                    print()
-                    print("Error! An integer was not inputted. Try again!")
+                    error_correction()
                     dcounter = dcounter - 1
