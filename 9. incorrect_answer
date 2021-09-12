@@ -1,0 +1,45 @@
+
+        # 9. If the guess is wrong + print lower or higher hint command:
+
+                if type(guess) == int and detector == dcounter:
+                    if guess > x:
+                        if mode == '0':
+                            errorcounter = errorcounter - 1
+                        print()
+                        print("║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║")
+                        print("║▌║▌║Incorrect! Your number is too high!║▌║▌║")
+                        print("║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║")
+                    elif guess < x:
+                        if mode == '0':
+                            errorcounter = errorcounter - 1
+                        print()
+                        print("║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌")
+                        print("║▌║▌║Incorrect! Your number is too low!▌║▌║▌")
+                        print("║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌")
+
+                    # Counting down number of guesses:
+
+                    if guess != x and mode == '0':
+                        if errorcounter > 1:
+                            print()
+                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+                            print("▀▄▀▄▀You have", errorcounter, "lives remaining!▀▄▀▄▀")
+                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+                        elif errorcounter == 1:
+                            print()
+                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
+                            print("▀▄▀▄▀You have 1 life remaining!!!▄▀▄▀▄")
+                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
+
+                        # If the user ran out of guesses:
+
+                        elif errorcounter == 0:
+                            print()
+                            print("YOU LOST! you are out of lives!")
+                            print()
+                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+                            print("Unlucky", name+", my number was", x, "!!!")
+                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+                            print()
+                            print("ROUND", counteragain, "SCORE:", counter)
+                            losses = losses + 1
