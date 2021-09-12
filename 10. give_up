@@ -6,19 +6,20 @@
                         print()
                         againone = input("Do you want to give up? y/n: ") 
 
-                # If the user gives up:
+                # If the user gives up + reveals the secret number and adds
+                # to the amount of total losses:
 
                         if againone in yes:
                             giveup = ()
                             print()
-                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
-                            print("You gave up! Unlucky", name+", my number was", x, "!!!")
-                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
-                            print()
-                            print("ROUND", counteragain, "SCORE:", counter)
+                            print("YOU GAVE UP!!!")
+                            reveal_secret()
                             losses = losses + 1
+
+                      # Breaks the loop if the user doesn't give up + Error
+                      # correction loop:
+
                         elif againone in no:
                             giveup = ()
                         else:
-                            print()
-                            print("Error! You must answer either 'yes' or 'no'. Try again!")
+                            invalid_input()
