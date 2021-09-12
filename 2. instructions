@@ -1,0 +1,38 @@
+
+# -----START OF FUNCTIONS-----
+
+def instructions():
+
+    # 2. List of instructions:
+
+    print()
+    print()
+    print("----------INSTRUCTIONS----------")
+    print()
+    print("For each round of the HIGHER OR LOWER GAME, you will be asked to...")
+    print()
+    print("- Enter a 'lower' and 'higher' boundary number. I will randomly generate")
+    print("a 'secret' number between your two chosen boundary numbers.")
+    print()
+    print("- Choose which mode to play: LIMITED MODE or INFINITE MODE.")
+    print("LIMITED MODE gives you the decision to choose how many lives (between")
+    print("1 to 10) you will give yourself to guess the 'secret' number. if you run")
+    print("out of lives, you lose.")
+    print("INFINITE MODE gives you infinite guesses, meaning it will not be possible")
+    print("for you to lose a round.")
+    print()
+    print("The main goal of this game is to guess the 'secret' number. If you")
+    print("manage to guess the 'secret' number correctly, you win.")
+    print()
+    print("Everytime you guess the 'secret' number incorrectly, you will be given a hint")
+    print("and the choice to either keep playing, or give up.")
+    print()
+    print("Mistakes such as not inputting an integer or inputting the same incorrect number")
+    print("more than once will still be counted into your game score, but you will not lose")
+    print("any lives if you choose to play in LIMITED MODE.")
+    print()
+    print("The amount of rounds you want to play is your choice. All your stats are")
+    print("always being calculated and will be shown once you have decided to stop")
+    print("playing the game.")
+    print()
+    print("Good luck", name+"!")
