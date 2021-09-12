@@ -26,6 +26,3 @@
             else:
                 print()
                 print("Alright", name+". Now let's play!")
-            finder = ()
-            guess = ()
-            guesslist = [""]
