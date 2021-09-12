@@ -1,11 +1,17 @@
 
-                # 12. Decision to restart the game:
+                # 12. Command that determines if the user has finished a round:
 
                 if guess == x or errorcounter == 0 or againone in yes:
-                    counterlist.append(counter)
+
+                    # Showing the amount of wins and losses:
+
+                    print()
                     print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
                     print("Wins:", wins, " | Losses:", losses)
                     print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+
+                    # The 'play again' decision:
+
                     againone = ()
                     againtwo = ()
                     while againtwo != 'yes' or againtwo != 'no':
@@ -25,12 +31,14 @@
                             print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
                             print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
                             average = (totalcounter / counteragain)
-                            print("LOWEST/BEST SCORE:", min(counterlist))
-                            print("HIGHEST/WORST SCORE:", max(counterlist))
+                            print("LOWEST/BEST WINNING SCORE:", min(counterlist))
+                            print("HIGHEST/WORST WINNING SCORE:", max(counterlist))
                             print("AVERAGE AMOUNT OF GUESSES PER GAME:", average)
                             print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
                             print()
                             break
+
+                        # One last error correction loop:
+
                         else:
-                            print()
-                            print("Error! You must answer either 'yes' or 'no'. Try again!")
+                            invalid_input()
