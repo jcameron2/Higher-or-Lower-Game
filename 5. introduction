@@ -6,7 +6,7 @@ wins = 0
 losses = 0
 counteragain = 0
 totalcounter = 0
-counterlist = []
+counterlist = ["n/a"]
 yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
 no = ['n', 'N', 'no', 'No', 'nO', 'NO']
 
@@ -21,7 +21,7 @@ print("HIGHER OR LOWER GAME.")
 
 yes_no("Before we start, have you played this game before? y/n: ")
 
-# 'Play again' loop command: 
+# 'Play again' loop command + a few more neccessary variables: 
 
 againtwo = ("yes")
 while againtwo in yes:
@@ -29,6 +29,6 @@ while againtwo in yes:
     dcounter = 0
     errorcounter = -1
 
-# Print minor function on different outcomes:
+# Print game loop function on different outcomes:
 
     againloop(counteragain)
