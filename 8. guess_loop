@@ -1,7 +1,10 @@
 
             # 8. Loop function to 'try again' + inputting guess command
             # + Resets all appropiate counter variables in a new round:
-
+            
+            finder = ()
+            guess = ()
+            guesslist = [""]
             againone = ("no")
             while againone in no:
                 try:
