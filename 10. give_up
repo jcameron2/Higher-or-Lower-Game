@@ -1,0 +1,24 @@
+
+                # 10. The choice to give up:
+
+                    giveup = ("loop")
+                    while guess != x and errorcounter != 0 and giveup == 'loop':
+                        print()
+                        againone = input("Do you want to give up? y/n: ") 
+
+                # If the user gives up:
+
+                        if againone in yes:
+                            giveup = ()
+                            print()
+                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+                            print("You gave up! Unlucky", name+", my number was", x, "!!!")
+                            print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+                            print()
+                            print("ROUND", counteragain, "SCORE:", counter)
+                            losses = losses + 1
+                        elif againone in no:
+                            giveup = ()
+                        else:
+                            print()
+                            print("Error! You must answer either 'yes' or 'no'. Try again!")
