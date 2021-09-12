@@ -1,0 +1,36 @@
+
+                # 12. Decision to restart the game:
+
+                if guess == x or errorcounter == 0 or againone in yes:
+                    counterlist.append(counter)
+                    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+                    print("Wins:", wins, " | Losses:", losses)
+                    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+                    againone = ()
+                    againtwo = ()
+                    while againtwo != 'yes' or againtwo != 'no':
+                        print()
+                        againtwo = input("Would you like to play again? y/n: ")
+                        if againtwo in yes:
+                            break
+
+                        # End game stats:
+
+                        elif againtwo in no:
+                            print()
+                            print("Thank you for playing", name+"! Hope you have a nice day!")
+                            print()
+                            print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
+                            print("STATS:")
+                            print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
+                            print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
+                            average = (totalcounter / counteragain)
+                            print("LOWEST/BEST SCORE:", min(counterlist))
+                            print("HIGHEST/WORST SCORE:", max(counterlist))
+                            print("AVERAGE AMOUNT OF GUESSES PER GAME:", average)
+                            print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
+                            print()
+                            break
+                        else:
+                            print()
+                            print("Error! You must answer either 'yes' or 'no'. Try again!")
