@@ -237,7 +237,7 @@ while againtwo in yes:
                 print()
                 print("Alright", name+". Now let's play!")
 
-            # 8. Resets all appropiate counter variables in a new round:
+            # 8. Resets all appropiate counter variables for a new round:
             
             finder = ()
             guess = ()
@@ -262,7 +262,7 @@ while againtwo in yes:
                             detector = detector + 1
                             if finder == guess:
                                 print()
-                                print("You already guessed that!!!")
+                                print("You already guessed that!!! Try again!")
                                 counter = counter - 1
                                 guesslist.remove(finder)
 
