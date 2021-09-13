@@ -21,12 +21,10 @@ print("HIGHER OR LOWER GAME.")
 
 yes_no("Before we start, have you played this game before? y/n: ")
 
-# 'Play again' loop command + a few more neccessary variables: 
+# 'Play again' loop command: 
 
 againtwo = ("yes")
 while againtwo in yes:
-    counter = 0
-    errorcounter = -1
 
 # Print game loop function on different outcomes:
 
