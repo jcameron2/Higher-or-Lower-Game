@@ -59,8 +59,8 @@ def instructions():
     print("and the choice to either keep playing, or give up.")
     print()
     print("Mistakes such as not inputting an integer or inputting the same incorrect number")
-    print("more than once will still be counted into your game score, but you will not lose")
-    print("any lives if you choose to play in LIMITED MODE.")
+    print("more than once for your guess will not be counted into removing a life in")
+    print("LIMITED MODE or into your game score. You will simply have to try again.")
     print()
     print("The amount of rounds you want to play is your choice. All your stats are")
     print("always being calculated and will be shown once you have decided to stop")
@@ -148,7 +148,7 @@ counterlist = ["n/a"]
 yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
 no = ['n', 'N', 'no', 'No', 'nO', 'NO']
 
-# Input name command + printing showing instructions function:
+# Inputting name command:
 
 name = input("Hello user. What is your name?: ")
 print()
@@ -164,7 +164,6 @@ yes_no("Before we start, have you played this game before? y/n: ")
 againtwo = ("yes")
 while againtwo in yes:
     counter = 0
-    dcounter = 0
     errorcounter = -1
 
 # Print game loop function on different outcomes:
@@ -238,18 +237,19 @@ while againtwo in yes:
                 print()
                 print("Alright", name+". Now let's play!")
 
-            # 8. Loop function to 'try again' + inputting guess command
-            # + Resets all appropiate counter variables in a new round:
+            # 8. Resets all appropiate counter variables in a new round:
             
             finder = ()
             guess = ()
             guesslist = [""]
             againone = ("no")
+
+            # Loop function to 'try again' + inputting guess command:
+
             while againone in no:
                 try:
                     detector = 0
                     totalcounter = totalcounter + 1
-                    dcounter = dcounter + 1
                     counter = counter + 1
                     print()
                     guess = int(input("Go on, guess my number: "))
@@ -258,23 +258,23 @@ while againtwo in yes:
                     
                     guesslist.append(guess)
                     for finder in guesslist:
-                        if detector < dcounter:
+                        if detector < counter:
                             detector = detector + 1
                             if finder == guess:
                                 print()
                                 print("You already guessed that!!!")
-                                dcounter = dcounter - 1
+                                counter = counter - 1
                                 guesslist.remove(finder)
 
                 # If the user does not input an integer:
 
                 except ValueError:
                     error_correction()
-                    dcounter = dcounter - 1
+                    counter = counter - 1
 
         # 9. Detecting if the guess is valid:
 
-                if type(guess) == int and detector == dcounter:
+                if type(guess) == int and detector == counter:
 
                 # If the guess is higher than the secret number:
 
