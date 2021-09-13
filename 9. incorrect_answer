@@ -1,7 +1,7 @@
 
         # 9. Detecting if the guess is valid:
 
-                if type(guess) == int and detector == dcounter:
+                if type(guess) == int and detector == counter:
 
                 # If the guess is higher than the secret number:
 
