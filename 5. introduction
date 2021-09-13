@@ -10,7 +10,7 @@ counterlist = ["n/a"]
 yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
 no = ['n', 'N', 'no', 'No', 'nO', 'NO']
 
-# Input name command + printing showing instructions function:
+# Inputting name command:
 
 name = input("Hello user. What is your name?: ")
 print()
@@ -26,7 +26,6 @@ yes_no("Before we start, have you played this game before? y/n: ")
 againtwo = ("yes")
 while againtwo in yes:
     counter = 0
-    dcounter = 0
     errorcounter = -1
 
 # Print game loop function on different outcomes:
