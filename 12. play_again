@@ -20,7 +20,7 @@
                         if againtwo in yes:
                             break
 
-                        # End game stats:
+                        # If the user doesn't want to play again:
 
                         elif againtwo in no:
                             print()
@@ -28,12 +28,17 @@
                             print()
                             print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
                             print("STATS:")
+                            print()
+
+                            # Prints all calculated end game stats:
+
                             print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
                             print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
-                            average = (totalcounter / counteragain)
+                            print("WIN RATE:", (100 / counteragain) * wins, "%")
+                            print("LOSE RATE:", (100 / counteragain) * losses, "%")
                             print("LOWEST/BEST WINNING SCORE:", min(counterlist))
                             print("HIGHEST/WORST WINNING SCORE:", max(counterlist))
-                            print("AVERAGE AMOUNT OF GUESSES PER GAME:", average)
+                            print("AVERAGE AMOUNT OF GUESSES PER GAME:", totalcounter / counteragain)
                             print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
                             print()
                             break
