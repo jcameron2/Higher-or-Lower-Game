@@ -1,8 +1,4 @@
 
-# -----START OF FUNCTIONS-----
-
-def instructions():
-
     # 2. List of instructions:
 
     print()
@@ -19,7 +15,7 @@ def instructions():
     print("1 to 10) you will give yourself to guess the 'secret' number. if you run")
     print("out of lives, you lose.")
     print("INFINITE MODE gives you infinite guesses, meaning it will not be possible")
-    print("for you to lose a round.")
+    print("for you to lose a round without giving up.")
     print()
     print("The main goal of this game is to guess the 'secret' number. If you")
     print("manage to guess the 'secret' number correctly, you win.")
