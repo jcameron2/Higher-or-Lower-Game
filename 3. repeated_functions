@@ -1,6 +1,7 @@
 
-# 3. Reveals the secret number:
-            
+# 3. (REPEATED FUNCTIONS) Reveals the secret number:
+
+
 def reveal_secret():
 
     print()
@@ -11,18 +12,18 @@ def reveal_secret():
     # Reveals the round's overall score:
 
     print()
-    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
+    print("ROUND", counteragain, "LOSING SCORE:", counter)
 
     # Error correction loop functions:
+
 
 def error_correction():
 
     print()
     print("Error! An integer was not inputted. Try again!")
 
+
 def invalid_input():
 
     print()
     print("Error! An invalid answer was inputted. Try again!")
-
-# -----END OF FUNCTIONS-----
