@@ -1,0 +1,26 @@
+
+                # 11. The choice to give up:
+
+                    while guess != x and errorcounter != 0:
+                        print()
+                        againone = input("Do you want to give up? y/n: ")
+
+                        # Breaks the loop if user does not give up:
+
+                        if againone in no:
+                            break
+
+                # If the user gives up + reveals the secret number and adds
+                # to the amount of total losses:
+
+                        elif againone in yes:
+                            errorcounter = 0
+                            print()
+                            print("YOU GAVE UP!!!")
+                            reveal_secret()
+                            losses = losses + 1
+
+                    # Error correction loop:
+
+                        else:
+                            invalid_input()
