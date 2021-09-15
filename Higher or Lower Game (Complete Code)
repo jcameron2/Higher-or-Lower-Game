@@ -41,7 +41,7 @@ def instructions():
     print()
     print("Good luck", name+"! (SCROLL UP TO SEE FIRST PART OF INSTRUCTIONS)")
 
-# 2. (STARTING FUNCTIONS) Showing instructions function and creating loop:
+# 2. (EARLY FUNCTIONS) Showing instructions function and creating loop:
 
 
 def yes_no(question):
