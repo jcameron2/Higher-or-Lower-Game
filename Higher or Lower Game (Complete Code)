@@ -41,7 +41,7 @@ def instructions():
     print()
     print("Good luck", name+"! (SCROLL UP TO SEE FIRST PART OF INSTRUCTIONS)")
 
-# 2. (EARLY FUNCTIONS) Showing instructions function and creating loop:
+# 2. (STARTING FUNCTIONS) Showing instructions function and creating loop:
 
 
 def yes_no(question):
@@ -407,24 +407,24 @@ while againtwo in yes:
                     while guess != x and errorcounter != 0:
                         print()
                         againone = input("Do you want to give up? y/n: ")
+
+                        # Breaks the loop if user does not give up:
+
                         if againone in no:
                             break
 
                 # If the user gives up + reveals the secret number and adds
                 # to the amount of total losses:
 
-                        if againone in yes:
+                        elif againone in yes:
                             errorcounter = 0
                             print()
                             print("YOU GAVE UP!!!")
                             reveal_secret()
                             losses = losses + 1
 
-                    # Breaks the loop if the user doesn't give up + Error
-                    # correction loop:
+                    # Error correction loop:
 
-                        elif againone in no:
-                            giveup = ()
                         else:
                             invalid_input()
 
