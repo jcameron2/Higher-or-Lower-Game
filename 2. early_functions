@@ -1,5 +1,6 @@
 
-# 2. Showing instructions function and creating loop:
+# 2. (EARLY FUNCTIONS) Showing instructions function and creating loop:
+
 
 def yes_no(question):
 
@@ -24,17 +25,18 @@ def yes_no(question):
 
         else:
             invalid_input()
-    
+
 # Function that shows different outcomes depending on amount of replays
 # and the previous mode and guess:
-    
+
+
 def againloop(counteragain):
 
     if counteragain > 0:
         print()
-        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
         print("Very well...  ROUND", counteragain + 1, "INITIATING...")
-        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
         if mode == '0':
             if guess == x:
                 print()
