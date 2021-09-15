@@ -1,0 +1,41 @@
+
+# 2. Showing instructions function and creating loop:
+
+def yes_no(question):
+
+    valid = False
+    while not valid:
+
+        # Shows question. If the user says no, instructions are shown.
+
+        print()
+        playedbefore = input(question)
+        if playedbefore in no:
+            instructions()
+            playedbefore = ("yes")
+            print()
+            input("Please enter ANYTHING to begin: ")
+        if playedbefore in yes:
+            print()
+            print("Alright... here we go!")
+            break
+
+        # If the user doesn't input yes or no:
+
+        else:
+            invalid_input()
+    
+# Function that shows different outcomes depending on amount of replays
+# and the previous mode and guess:
+    
+def againloop(counteragain):
+
+    if counteragain > 0:
+        print()
+        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        print("Very well...  ROUND", counteragain + 1, "INITIATING...")
+        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        if mode == '0':
+            if guess == x:
+                print()
+                print("I will not lose this time!!!")
