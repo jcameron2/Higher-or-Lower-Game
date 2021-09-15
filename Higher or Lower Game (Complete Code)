@@ -1,5 +1,7 @@
+import random
 
 # -----START OF FUNCTIONS-----
+
 
 def instructions():
 
@@ -7,38 +9,40 @@ def instructions():
 
     print()
     print()
-    print("----------INSTRUCTIONS----------")
+    print("----------INSTRUCTIONS-----------")
     print()
-    print("For each round of the HIGHER OR LOWER GAME, you will be asked to...")
+    print("For each round of the HL Game, you will be asked to...")
     print()
-    print("- Enter a 'lower' and 'higher' boundary number. I will randomly generate")
-    print("a 'secret' number between your two chosen boundary numbers.")
+    print("- Enter a 'lower' and 'higher' boundary number. I will randomly")
+    print("generate a secret number between your two chosen boundary numbers.")
     print()
     print("- Choose which mode to play: LIMITED MODE or INFINITE MODE.")
-    print("LIMITED MODE gives you the decision to choose how many lives (between")
-    print("1 to 10) you will give yourself to guess the 'secret' number. if you run")
-    print("out of lives, you lose.")
-    print("INFINITE MODE gives you infinite guesses, meaning it will not be possible")
-    print("for you to lose a round without giving up.")
+    print("LIMITED MODE gives you the decision to choose how many lives")
+    print("(1 to 10) you will give yourself to guess the secret number.")
+    print("If you run out of lives, you lose.")
+    print("INFINITE MODE gives you infinite guesses, meaning it will not be")
+    print("possible for you to lose a round without giving up.")
     print()
     print("The main goal of this game is to guess the 'secret' number. If you")
-    print("manage to guess the 'secret' number correctly, you win.")
+    print("manage to guess the secret number correctly, you win.")
     print()
-    print("Everytime you guess the 'secret' number incorrectly, you will be given a point")
-    print("for your game score, a hint, and the choice to either keep playing, or give up.")
-    print("(THE SMALLER SCORE YOU HAVE, THE BETTER.)")
+    print("Everytime you guess the secret number incorrectly, you will be")
+    print("given a point for your score, a hint, and the choice to either")
+    print("keep playing, or give up. (THE SMALLER SCORE, THE BETTER.)")
     print()
-    print("Mistakes such as not inputting an integer or inputting the same incorrect number")
-    print("more than once for your guess will not be counted for either removing a life in LIMITED")
-    print("MODE or adding a point into your game score. You will simply have to try again.")
+    print("Mistakes such as not inputting an integer / inputting the same")
+    print("incorrect number more than once for your guess will not be")
+    print("counted for either removing a life in LIMITED MODE or adding")
+    print("a point into your game score. You will simply have to try again.")
     print()
-    print("The amount of rounds you want to play is your choice. All your stats are")
-    print("always being calculated and will be shown once you have decided to stop")
-    print("playing the game.")
+    print("The amount of rounds you want to play is your choice. All your")
+    print("stats are always being calculated and will be shown once you")
+    print("have decided to stop playing the game.")
     print()
-    print("Good luck", name+"!")
+    print("Good luck", name+"! (SCROLL UP TO SEE FIRST PART OF INSTRUCTIONS)")
 
-# 2. Showing instructions function and creating loop:
+# 2. (STARTING FUNCTIONS) Showing instructions function and creating loop:
+
 
 def yes_no(question):
 
@@ -63,24 +67,26 @@ def yes_no(question):
 
         else:
             invalid_input()
-    
+
 # Function that shows different outcomes depending on amount of replays
 # and the previous mode and guess:
-    
+
+
 def againloop(counteragain):
 
     if counteragain > 0:
         print()
-        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
         print("Very well...  ROUND", counteragain + 1, "INITIATING...")
-        print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+        print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
         if mode == '0':
             if guess == x:
                 print()
                 print("I will not lose this time!!!")
 
-# 3. Reveals the secret number:
-            
+# 3. (REPEATED FUNCTIONS) Reveals the secret number:
+
+
 def reveal_secret():
 
     print()
@@ -91,26 +97,92 @@ def reveal_secret():
     # Reveals the round's overall score:
 
     print()
-    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
+    print("ROUND", counteragain, "LOSING SCORE:", counter)
 
     # Error correction loop functions:
+
 
 def error_correction():
 
     print()
     print("Error! An integer was not inputted. Try again!")
 
+
 def invalid_input():
 
     print()
     print("Error! An invalid answer was inputted. Try again!")
+
+# 4. (LATE FUNCTIONS) Showing different outcomes if the user wins:
+
+
+def win_outcomes():
+
+    # If it took 1 attempt to guess number correctly:
+
+    if counter == 1:
+
+        # If the boundaries are equal:
+
+        if lower == upper:
+            print()
+            print("ROUND", counteragain, "WINNING SCORE:", counter,)
+            print()
+            print("...that's quite strange.")
+            print()
+            print("Aha! I see that both of your boundary numbers are equal.")
+            print()
+            print("You think you're so smart, don't you", name+"?")
+
+        # If the boundaries are not equal:
+
+        elif lower != upper:
+            print()
+            print("ROUND", counteragain, "WINNING SCORE:", counter)
+            print()
+            print("WOW!!! I must say you got a bit lucky there", name+".")
+
+# If it took more than 1 attempt to guess number correctly:
+
+    if counter > 1:
+        print()
+        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+        print("ROUND", counteragain, "FINAL WINNING SCORE:", counter)
+        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+
+# Function that shows end game stats:
+
+
+def end_stats():
+
+    # If the user doesn't want to play again:
+
+    print()
+    print("Thank you for playing the HL Game", name+"!")
+    print()
+    print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
+    print("STATS:")
+
+    # Prints all calculated end game stats:
+
+    print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
+    print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
+    print("WIN RATE:", (100 / counteragain) * wins, "%")
+    print("LOSE RATE:", (100 / counteragain) * losses, "%")
+    print("LOWEST/BEST WINNING SCORE:", min(counterlist))
+    print("HIGHEST/WORST WINNING SCORE:", max(counterlist))
+    print("MEAN OF GUESSES PER GAME:", totalcounter / counteragain)
+    print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
+    print()
+    return
+
 
 # -----END OF FUNCTIONS-----
 
 
 # -----START-OF-MAIN-----
 
-# 4. Print title command:
+# 5. Print title command:
 
 print()
 print()
@@ -141,9 +213,8 @@ print()
 print()
 print()
 
-# 5. Import random + list of useful variables and lists for the whole program:
+# 6. Import random + list of useful variables and lists for the whole program:
 
-import random
 wins = 0
 losses = 0
 counteragain = 0
@@ -163,27 +234,28 @@ print("HIGHER OR LOWER GAME.")
 
 yes_no("Before we start, have you played this game before? y/n: ")
 
-# 'Play again' loop command: 
+# 'Play again' loop command:
 
 againtwo = ("yes")
 while againtwo in yes:
 
-# Print game loop function on different outcomes:
+    # Print game loop function on different outcomes:
 
     againloop(counteragain)
 
-    # 6. Inputting lower and upper boundary commands
+    # 7. Inputting lower and upper boundary commands
 
     lower = 1
     upper = 0
+    errorcounter = -1
     while lower > upper:
         try:
             print()
             lower = int(input("Please enter a lower boundary integer: "))
             print()
-            upper = int(input("Good, now please enter an upper boundary integer: "))
+            upper = int(input("Now, please enter an upper boundary integer: "))
 
-         # Error correction loop and number generator command:
+            # Error correction loop and number generator command:
 
             if lower > upper:
                 invalid_input()
@@ -211,14 +283,13 @@ while againtwo in yes:
                 print()
                 print("Okay. LIMITED MODE has been activated.")
 
-            # 7. Inputting amount of lives between 1 and 10: 
+            # 8. Inputting amount of lives between 1 and 10:
 
-                errorcounter = -1
                 while errorcounter < 1 or errorcounter > 10:
                     try:
                         print()
-                        print("Please enter the amount of lives you will give yourself to")
-                        errorcounter = int(input("guess my number (between 1 to 10): "))
+                        print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
+                        errorcounter = int(input("(between 1 to 10): "))
 
                         # Error correction loop:
 
@@ -230,18 +301,20 @@ while againtwo in yes:
                     except ValueError:
                         error_correction()
 
-            # Counting amount of total rounds + Identifying the user's selected mode:
+            # Counting amount of total rounds
+            # + Identifying the user's selected mode:
 
             counteragain = counteragain + 1
             if mode != '0':
                 print()
-                print("Okay. INFINITE MODE has been activated. Now let's play", name+"!")
+                print("Okay. INFINITE MODE has been activated.")
+                print("Now let's play", name+"!")
             else:
                 print()
                 print("Alright", name+". Now let's play!")
 
-            # 8. Resets all appropiate counter variables for a new round:
-            
+            # 9. Resets all appropiate counter variables for a new round:
+
             counter = 0
             guess = ()
             guesslist = [""]
@@ -258,8 +331,8 @@ while againtwo in yes:
                     print()
                     guess = int(input("Go on, guess my number: "))
 
-                    # Searching for a same guess the user may have already inputted:
-                    
+                    # Searching for a same guess user may've already inputted:
+
                     guesslist.append(guess)
                     for finder in guesslist:
                         if detector < counter:
@@ -276,11 +349,11 @@ while againtwo in yes:
                     error_correction()
                     counter = counter - 1
 
-        # 9. Detecting if the guess is valid:
+        # 10. Detecting if the guess is valid:
 
                 if type(guess) == int and detector == counter:
 
-                # If the guess is higher than the secret number:
+                    # If the guess is higher than the secret number:
 
                     if guess > x:
                         if mode == '0':
@@ -291,7 +364,7 @@ while againtwo in yes:
                         print("║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║█│▌║▌║▌║")
 
                 # If the guess is lower than the secret number:
-                    
+
                     elif guess < x:
                         if mode == '0':
                             errorcounter = errorcounter - 1
@@ -308,11 +381,11 @@ while againtwo in yes:
 
                         if errorcounter > 1:
                             print()
-                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
-                            print("▀▄▀▄▀You have", errorcounter, "lives remaining!▀▄▀▄▀")
-                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+                            print("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
+                            print("You have", errorcounter, "lives remaining!")
+                            print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
 
-                        # If there is exactly 1 more guess remaining:             
+                        # If there is exactly 1 more guess remaining:
 
                         elif errorcounter == 1:
                             print()
@@ -320,8 +393,8 @@ while againtwo in yes:
                             print("▀▄▀▄▀You have 1 life remaining!!!▄▀▄▀▄")
                             print("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄")
 
-                        # If the user ran out of guesses + reveals secret number
-                        # and adds to the amount of total losses:
+                        # If the user ran out of guesses + reveals secret
+                        # number and adds to the amount of total losses:
 
                         elif errorcounter == 0:
                             print()
@@ -329,78 +402,53 @@ while againtwo in yes:
                             reveal_secret()
                             losses = losses + 1
 
-                # 10. The choice to give up:
+                # 11. The choice to give up:
 
-                    giveup = ("loop")
-                    while guess != x and errorcounter != 0 and giveup == 'loop':
+                    while guess != x and errorcounter != 0:
                         print()
-                        againone = input("Do you want to give up? y/n: ") 
+                        againone = input("Do you want to give up? y/n: ")
+                        if againone in no:
+                            break
 
                 # If the user gives up + reveals the secret number and adds
                 # to the amount of total losses:
 
                         if againone in yes:
-                            giveup = ()
+                            errorcounter = 0
                             print()
                             print("YOU GAVE UP!!!")
                             reveal_secret()
                             losses = losses + 1
 
-                      # Breaks the loop if the user doesn't give up + Error
-                      # correction loop:
+                    # Breaks the loop if the user doesn't give up + Error
+                    # correction loop:
 
                         elif againone in no:
                             giveup = ()
                         else:
                             invalid_input()
 
-            # 11. If the guess is correct + adds to the amount of total wins:
+            # 12. If the guess is correct + adds to the amount of total wins:
 
                 if guess == x:
                     print()
                     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
-                    print("CORRECT! Congratulations... my number was", x, "!!!")
+                    print("CORRECT!!! my number was", x, "!!!")
                     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
 
-                     # Counting the amount of wins + Activating 'counterlist' 
-                     # variable as a primarily integer list:
+            # Counting the amount of wins + Activating 'counterlist'
+            # variable as a primarily integer list:
 
                     wins = wins + 1
                     if wins == 1:
                         counterlist.remove("n/a")
                     counterlist.append(counter)
 
-            # If it took 1 attempt to guess number correctly:
+                    # Different win outcomes function:
 
-                    if counter == 1:
+                    win_outcomes()
 
-                      # If the boundaries are equal:
-
-                        if lower == upper:
-                            print()
-                            print("ROUND", counteragain, "FINAL WINNING SCORE:", counter, "...that's quite strange.")
-                            print()
-                            print("Aha! I see that both of your selected boundary numbers are equal.")
-                            print()
-                            print("You think you're so smart, don't you", name+"?")
-
-                        # If the boundaries are not equal:
-
-                        elif lower != upper:
-                            print()
-                            print("ROUND", counteragain, "FINAL WINNING SCORE:", counter, "...Wow!!!")
-                            print()
-                            print("I must say you got a bit lucky there", name+".")
-
-                # If it took more than 1 attempt to guess number correctly:
-
-                    if counter > 1:
-                        print()
-                        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
-                        print("ROUND", counteragain, "FINAL WINNING SCORE:", counter)
-                        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
-
-                # 12. Command that determines if the user has finished a round:
+                # Command that determines if the user has finished a round:
 
                 if guess == x or errorcounter == 0 or againone in yes:
 
@@ -421,32 +469,16 @@ while againtwo in yes:
                         if againtwo in yes:
                             break
 
-                        # If the user doesn't want to play again:
+                        # Shows the end game stats function:
 
                         elif againtwo in no:
-                            print()
-                            print("Thank you for playing", name+"! Hope you have a nice day!")
-                            print()
-                            print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
-                            print("STATS:")
-                            print()
-
-                            # Prints all calculated end game stats:
-
-                            print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
-                            print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
-                            print("WIN RATE:", (100 / counteragain) * wins, "%")
-                            print("LOSE RATE:", (100 / counteragain) * losses, "%")
-                            print("LOWEST/BEST WINNING SCORE:", min(counterlist))
-                            print("HIGHEST/WORST WINNING SCORE:", max(counterlist))
-                            print("AVERAGE AMOUNT OF GUESSES PER GAME:", totalcounter / counteragain)
-                            print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
-                            print()
+                            end_stats()
                             break
 
                         # One last error correction loop:
 
                         else:
                             invalid_input()
-                            
+
+
 # -----END-OF-MAIN-----
