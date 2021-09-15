@@ -1,0 +1,40 @@
+
+    # 7. Inputting lower and upper boundary commands
+
+    lower = 1
+    upper = 0
+    errorcounter = -1
+    while lower > upper:
+        try:
+            print()
+            lower = int(input("Please enter a lower boundary integer: "))
+            print()
+            upper = int(input("Now, please enter an upper boundary integer: "))
+
+            # Error correction loop and number generator command:
+
+            if lower > upper:
+                invalid_input()
+            if lower <= upper:
+                x = random.randint(lower, upper)
+
+        # If the user does not input an integer:
+
+        except ValueError:
+            error_correction()
+            lower = 1
+            upper = 0
+
+        # CALCUATING SECRET NUMBER + Entering preferred mode:
+
+        if lower <= upper:
+            print()
+            print("¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,")
+            print("¸,ø¤º°`Alright. CALCULATING SECRET NUMBER...`°º¤ø,¸")
+            print("`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º")
+            print()
+            print("Now, please ENTER '0' to activate LIMITED MODE or")
+            mode = input("ENTER ANYTHING ELSE to activate INFINITE MODE: ")
+            if mode == '0':
+                print()
+                print("Okay. LIMITED MODE has been activated.")
