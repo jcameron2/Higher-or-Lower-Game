@@ -436,8 +436,8 @@ while againtwo in yes:
                     print("CORRECT!!! my number was", x, "!!!")
                     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
 
-            # Counting the amount of wins + Activating 'counterlist'
-            # variable as a primarily integer list:
+            # Counting the amount of wins
+            # + Activating 'counterlist' as an integer list:
 
                     wins = wins + 1
                     if wins == 1:
