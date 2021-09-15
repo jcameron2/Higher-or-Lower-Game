@@ -1,36 +1,30 @@
 
-            # 8. Resets all appropiate counter variables for a new round:
-            
-            counter = 0
-            guess = ()
-            guesslist = [""]
-            finder = ()
-            againone = ("no")
+            # 8. Inputting amount of lives between 1 and 10:
 
-            # Loop function to 'try again' + inputting guess command:
+                while errorcounter < 1 or errorcounter > 10:
+                    try:
+                        print()
+                        print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
+                        errorcounter = int(input("(between 1 to 10): "))
 
-            while againone in no:
-                try:
-                    detector = 0
-                    totalcounter = totalcounter + 1
-                    counter = counter + 1
-                    print()
-                    guess = int(input("Go on, guess my number: "))
+                        # Error correction loop:
 
-                    # Searching for a same guess the user may have already inputted:
-                    
-                    guesslist.append(guess)
-                    for finder in guesslist:
-                        if detector < counter:
-                            detector = detector + 1
-                            if finder == guess:
-                                print()
-                                print("You already guessed that!!! Try again!")
-                                counter = counter - 1
-                                guesslist.remove(finder)
+                        if errorcounter < 1 or errorcounter > 10:
+                            invalid_input()
 
-                # If the user does not input an integer:
+                    # If the user does not input an integer:
 
-                except ValueError:
-                    error_correction()
-                    counter = counter - 1
+                    except ValueError:
+                        error_correction()
+
+            # Counting amount of total rounds
+            # + Identifying the user's selected mode:
+
+            counteragain = counteragain + 1
+            if mode != '0':
+                print()
+                print("Okay. INFINITE MODE has been activated.")
+                print("Now let's play", name+"!")
+            else:
+                print()
+                print("Alright", name+". Now let's play!")
