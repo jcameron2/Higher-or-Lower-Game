@@ -63,22 +63,8 @@ def yes_no(question):
 
         else:
             invalid_input()
-            
- def reveal_secret():
-
-    # Reveals the secret number:
-
-    print()
-    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
-    print("Unlucky", name+", my number was", x, "!!!")
-    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
-
-    # Reveals the round's overall score:
-
-    print()
-    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
     
-# 3. Function that shows different outcomes depending on amount of replays
+# Function that shows different outcomes depending on amount of replays
 # and the previous mode and guess:
     
 def againloop(counteragain):
@@ -92,6 +78,20 @@ def againloop(counteragain):
             if guess == x:
                 print()
                 print("I will not lose this time!!!")
+
+# 3. Reveals the secret number:
+            
+def reveal_secret():
+
+    print()
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+    print("Unlucky", name+", my number was", x, "!!!")
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+
+    # Reveals the round's overall score:
+
+    print()
+    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
 
     # Error correction loop functions:
 
@@ -449,4 +449,4 @@ while againtwo in yes:
                         else:
                             invalid_input()
                             
- # -----END-OF-MAIN-----
+# -----END-OF-MAIN-----
