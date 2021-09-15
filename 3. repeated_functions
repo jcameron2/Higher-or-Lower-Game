@@ -1,0 +1,28 @@
+
+# 3. Reveals the secret number:
+            
+def reveal_secret():
+
+    print()
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+    print("Unlucky", name+", my number was", x, "!!!")
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
+
+    # Reveals the round's overall score:
+
+    print()
+    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
+
+    # Error correction loop functions:
+
+def error_correction():
+
+    print()
+    print("Error! An integer was not inputted. Try again!")
+
+def invalid_input():
+
+    print()
+    print("Error! An invalid answer was inputted. Try again!")
+
+# -----END OF FUNCTIONS-----
