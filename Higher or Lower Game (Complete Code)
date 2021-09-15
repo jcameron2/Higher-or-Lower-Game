@@ -1,40 +1,9 @@
 
-# 1. Print title command:
-
-print()
-print()
-print()
-print()
-print()
-print("  _    _  ______   _____  _    _  ______  ______")
-print(" | |  | ||__  __| / ____|| |  | ||  ____||  __  \ ")
-print(" | |__| |  |  |  | |  __ | |__| || |____ | |__/ / ")
-print(" |  __  |  |  |  | | |_ ||  __  ||  ____||     \ ")
-print(" | |  | | _|  |_ \ |__| || |  | || |____ |  |\  \ ")
-print(" |_|  |_||______| \_____||_|  |_||______||__| \__\ ")
-print("   ____   ______          _        ____   _    _  ______  ______")
-print("  / __ \ |  __  \        | |      / __ \ | |  | ||  ____||  __  \ ")
-print(" | |  | || |__/ /        | |     | |  | || |  | || |____ | |__/ / ")
-print(" | |  | ||     \         | |     | |  | || |/\| ||  ____||     \ ")
-print(" | |__| ||  |\  \        | |____ | |__| ||  /\  || |____ |  |\  \ ")
-print("  \____/ |__| \__\       |______| \____/ |_/  \_||______||__| \__\ ")
-print("   _____          __  __  ______ ")
-print("  / ____|   /\   |  \/  ||  ____| ")
-print(" | |  __   /  \  | \  / || |____ ")
-print(" | | |_ | / /\ \ | |\/| ||  ____| ")
-print(" \ |__| |/ ____ \| |  | || |____ ")
-print("  \_____/_/    \_\_|  |_||______| ")
-print()
-print()
-print()
-print()
-print()
-
 # -----START OF FUNCTIONS-----
 
 def instructions():
 
-    # 2. List of instructions:
+    # 1. List of instructions:
 
     print()
     print()
@@ -69,9 +38,9 @@ def instructions():
     print()
     print("Good luck", name+"!")
 
-def yes_no(question):
+# 2. Showing instructions function and creating loop:
 
-    # 3. Showing instructions function and creating loop:
+def yes_no(question):
 
     valid = False
     while not valid:
@@ -94,20 +63,8 @@ def yes_no(question):
 
         else:
             invalid_input()
-
-    # Error correction loop commmands:
-
-def error_correction():
-
-    print()
-    print("Error! An integer was not inputted. Try again!")
-
-def invalid_input():
-
-    print()
-    print("Error! An invalid answer was inputted. Try again!")
-
-def reveal_secret():
+            
+ def reveal_secret():
 
     # Reveals the secret number:
 
@@ -119,12 +76,12 @@ def reveal_secret():
     # Reveals the round's overall score:
 
     print()
-    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter)
-
+    print("ROUND", counteragain, "FINAL LOSING SCORE:", counter) 
+    
+# 3. Function that shows different outcomes depending on amount of replays
+# and the previous mode and guess:
+    
 def againloop(counteragain):
-
-    # 4. Function that shows different outcomes depending on amount of replays
-    # and the previous mode and guess:
 
     if counteragain > 0:
         print()
@@ -136,7 +93,53 @@ def againloop(counteragain):
                 print()
                 print("I will not lose this time!!!")
 
+    # Error correction loop functions:
+
+def error_correction():
+
+    print()
+    print("Error! An integer was not inputted. Try again!")
+
+def invalid_input():
+
+    print()
+    print("Error! An invalid answer was inputted. Try again!")
+
 # -----END OF FUNCTIONS-----
+
+
+# -----START-OF-MAIN-----
+
+# 4. Print title command:
+
+print()
+print()
+print()
+print()
+print()
+print("  _    _  ______   _____  _    _  ______  ______")
+print(" | |  | ||__  __| / ____|| |  | ||  ____||  __  \ ")
+print(" | |__| |  |  |  | |  __ | |__| || |____ | |__/ / ")
+print(" |  __  |  |  |  | | |_ ||  __  ||  ____||     \ ")
+print(" | |  | | _|  |_ \ |__| || |  | || |____ |  |\  \ ")
+print(" |_|  |_||______| \_____||_|  |_||______||__| \__\ ")
+print("   ____   ______          _        ____   _    _  ______  ______")
+print("  / __ \ |  __  \        | |      / __ \ | |  | ||  ____||  __  \ ")
+print(" | |  | || |__/ /        | |     | |  | || |  | || |____ | |__/ / ")
+print(" | |  | ||     \         | |     | |  | || |/\| ||  ____||     \ ")
+print(" | |__| ||  |\  \        | |____ | |__| ||  /\  || |____ |  |\  \ ")
+print("  \____/ |__| \__\       |______| \____/ |_/  \_||______||__| \__\ ")
+print("   _____          __  __  ______ ")
+print("  / ____|   /\   |  \/  ||  ____| ")
+print(" | |  __   /  \  | \  / || |____ ")
+print(" | | |_ | / /\ \ | |\/| ||  ____| ")
+print(" \ |__| |/ ____ \| |  | || |____ ")
+print("  \_____/_/    \_\_|  |_||______| ")
+print()
+print()
+print()
+print()
+print()
 
 # 5. Import random + list of useful variables and lists for the whole program:
 
@@ -445,3 +448,5 @@ while againtwo in yes:
 
                         else:
                             invalid_input()
+                            
+  # -----END-OF-MAIN-----
