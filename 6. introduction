@@ -15,7 +15,7 @@ nameinput = input("Hello user. What is your name?: ")
 
 # Capitalizing name:
 
-name = nameinput.capitalize()
+name = nameinput.title()
 print()
 print("Hello", name+". I am the program that you will be versing in the")
 print("HIGHER OR LOWER GAME.")
