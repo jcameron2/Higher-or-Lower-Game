@@ -27,3 +27,13 @@ def invalid_input():
 
     print()
     print("Error! An invalid answer was inputted. Try again!")
+
+# TEST CODE:
+
+name = ("Test")
+counteragain = 1
+counter = 13
+x = 48
+reveal_secret()
+error_correction()
+invalid_input()
