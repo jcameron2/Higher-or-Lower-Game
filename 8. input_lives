@@ -1,30 +1,41 @@
 
-            # 8. Inputting amount of lives between 1 and 10:
+# TEST CODE:
 
-                while errorcounter < 1 or errorcounter > 10:
-                    try:
-                        print()
-                        print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
-                        errorcounter = int(input("(between 1 to 10): "))
+counteragain = 0
+mode = '0'
+errorcounter = 0
+name = ("Test")
+if errorcounter == 0:
+    errorcounter = -1
 
-                        # Error correction loop:
+    # 8. Inputting amount of lives between 1 and 10:
 
-                        if errorcounter < 1 or errorcounter > 10:
-                            invalid_input()
+    while errorcounter < 1 or errorcounter > 10:
+        try:
+            print()
+            print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
+            errorcounter = int(input("(between 1 to 10): "))
 
-                    # If the user does not input an integer:
+            # Error correction loop:
 
-                    except ValueError:
-                        error_correction()
-
-            # Counting amount of total rounds
-            # + Identifying the user's selected mode:
-
-            counteragain = counteragain + 1
-            if mode != '0':
+            if errorcounter < 1 or errorcounter > 10:
                 print()
-                print("Okay. INFINITE MODE has been activated.")
-                print("Now let's play", name+"!")
-            else:
-                print()
-                print("Alright", name+". Now let's play!")
+                print("(INVALID_INPUT FUNCTION)")
+
+        # If the user does not input an integer:
+
+        except ValueError:
+            print()
+            print("(ERROR_CORRECTION FUNCTION)")
+
+# Counting amount of total rounds
+# + Identifying the user's selected mode:
+
+counteragain = counteragain + 1
+if mode != '0':
+    print()
+    print("Okay. INFINITE MODE has been activated.")
+    print("Now let's play", name+"!")
+else:
+    print()
+    print("Alright", name+". Now let's play!")
