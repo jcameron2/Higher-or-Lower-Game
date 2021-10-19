@@ -176,7 +176,6 @@ def end_stats():
     print()
     return
 
-
 # -----END OF FUNCTIONS-----
 
 
@@ -483,6 +482,5 @@ while againtwo in yes:
 
                         else:
                             invalid_input()
-
 
 # -----END-OF-MAIN-----
