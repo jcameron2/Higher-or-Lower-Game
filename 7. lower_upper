@@ -34,7 +34,7 @@ while lower > upper:
     if lower <= upper:
         print()
         print("¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,")
-        print("¸,ø¤º°`Alright. CALCULATING SECRET NUMBER...`°º¤ø,¸")
+        print("       Alright. CALCULATING SECRET NUMBER...       ")
         print("`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º")
         print()
         print("Now, please ENTER '0' to activate LIMITED MODE or")
