@@ -12,7 +12,8 @@ def yes_no(question):
         print()
         playedbefore = input(question)
         if playedbefore in no:
-            instructions()
+            print()
+            print("Shows instructions")
             playedbefore = ("yes")
             print()
             input("Please enter ANYTHING to begin: ")
@@ -24,10 +25,10 @@ def yes_no(question):
         # If the user doesn't input yes or no:
 
         else:
-            invalid_input()
+            print("Error!")
 
-# Function that shows different outcomes depending on amount of replays
-# and the previous mode and guess:
+# Function that shows different outcomes depending on amount of
+# replays and the previous mode and guess:
 
 
 def againloop(counteragain):
@@ -41,3 +42,15 @@ def againloop(counteragain):
             if guess == x:
                 print()
                 print("I will not lose this time!!!")
+
+
+# TEST CODE:
+
+counteragain = 1
+mode = 0
+guess = 0
+x = 0
+yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
+no = ['n', 'N', 'no', 'No', 'nO', 'NO']
+yes_no("Before we start, have you played this game before? y/n: ")
+againloop(counteragain)
