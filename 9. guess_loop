@@ -1,36 +1,44 @@
 
-            # 9. Resets all appropiate counter variables for a new round:
+# TEST VARIABLES:
 
-            counter = 0
-            guess = ()
-            guesslist = [""]
-            finder = ()
-            againone = ("no")
+counter = 0
+totalcounter = 0
+no = ['n', 'N', 'no', 'No', 'nO', 'NO']
 
-            # Loop function to 'try again' + inputting guess command:
+# 9. Resets all appropiate counter variables for a new round:
 
-            while againone in no:
-                try:
-                    detector = 0
-                    totalcounter = totalcounter + 1
-                    counter = counter + 1
+counter = 0
+guess = ()
+guesslist = [""]
+finder = ()
+againone = ("no")
+
+# Loop function to 'try again' + inputting guess command:
+
+while againone in no:
+    try:
+        detector = 0
+        totalcounter = totalcounter + 1
+        counter = counter + 1
+        print()
+        guess = int(input("Go on, guess my number: "))
+
+        # Searching for a same guess user may've already inputted:
+
+        guesslist.append(guess)
+        for finder in guesslist:
+            if detector < counter:
+                detector = detector + 1
+                if finder == guess:
                     print()
-                    guess = int(input("Go on, guess my number: "))
+                    print("You already guessed that!!! Try again!")
+                    counter = counter - 1
+                    guesslist.remove(finder)
 
-                    # Searching for a same guess user may've already inputted:
+    # If the user does not input an integer:
 
-                    guesslist.append(guess)
-                    for finder in guesslist:
-                        if detector < counter:
-                            detector = detector + 1
-                            if finder == guess:
-                                print()
-                                print("You already guessed that!!! Try again!")
-                                counter = counter - 1
-                                guesslist.remove(finder)
-
-                # If the user does not input an integer:
-
-                except ValueError:
-                    error_correction()
+    except ValueError:
+        print()
+        print("(ERROR_CORRECTION FUNCTION)")
+        counter = counter - 1
                     counter = counter - 1
