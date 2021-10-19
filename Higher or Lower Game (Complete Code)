@@ -277,7 +277,7 @@ while againtwo in yes:
         if lower <= upper:
             print()
             print("¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,")
-            print("¸,ø¤º°`Alright. CALCULATING SECRET NUMBER...`°º¤ø,¸")
+            print("       Alright. CALCULATING SECRET NUMBER...       ")
             print("`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º")
             print()
             print("Now, please ENTER '0' to activate LIMITED MODE or")
@@ -436,7 +436,7 @@ while againtwo in yes:
                 if guess == x:
                     print()
                     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
-                    print("CORRECT!!! my number was", x, "!!!")
+                    print("       CORRECT!!! my number was", x, "!!!       ")
                     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
 
             # Counting the amount of wins
