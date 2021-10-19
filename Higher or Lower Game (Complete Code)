@@ -2,10 +2,10 @@ import random
 
 # -----START OF FUNCTIONS-----
 
+# 1. List of instructions:
+
 
 def instructions():
-
-    # 1. List of instructions:
 
     print()
     print()
@@ -68,8 +68,8 @@ def yes_no(question):
         else:
             invalid_input()
 
-# Function that shows different outcomes depending on amount of replays
-# and the previous mode and guess:
+# Function that shows different outcomes depending on amount of
+# replays and the previous mode and guess:
 
 
 def againloop(counteragain):
