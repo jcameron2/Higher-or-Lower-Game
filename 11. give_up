@@ -1,26 +1,37 @@
 
-                # 11. The choice to give up:
+# TEST VARIABLES:
 
-                    while guess != x and errorcounter != 0:
-                        print()
-                        againone = input("Do you want to give up? y/n: ")
+guess = 0
+x = 1
+errorcounter = 1
+yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
+no = ['n', 'N', 'no', 'No', 'nO', 'NO']
+losses = 0
 
-                        # Breaks the loop if user does not give up:
+# 11. The choice to give up:
 
-                        if againone in no:
-                            break
+while guess != x and errorcounter != 0:
+    print()
+    againone = input("Do you want to give up? y/n: ")
 
-                # If the user gives up + reveals the secret number and adds
-                # to the amount of total losses:
+    # Breaks the loop if user does not give up:
 
-                        elif againone in yes:
-                            errorcounter = 0
-                            print()
-                            print("YOU GAVE UP!!!")
-                            reveal_secret()
-                            losses = losses + 1
+    if againone in no:
+        break
 
-                    # Error correction loop:
+# If the user gives up + reveals the secret number and adds
+# to the amount of total losses:
 
-                        else:
-                            invalid_input()
+    elif againone in yes:
+        errorcounter = 0
+        print()
+        print("YOU GAVE UP!!!")
+        print()
+        print("(PRINT REVEAL_SECRET FUNCTION)")
+        losses = losses + 1
+
+# Error correction loop:
+
+    else:
+        print()
+        print("(INVALID_INPUT FUNCTION)")
