@@ -1,11 +1,11 @@
-import random
+#(import random)
 
 # -----START OF FUNCTIONS-----
 
 
-def instructions():
+#1. Showing instructions function:
 
-    # 1. List of instructions:
+def instructions():
 
     print()
     print()
@@ -40,3 +40,9 @@ def instructions():
     print("have decided to stop playing the game.")
     print()
     print("Good luck", name+"! (SCROLL UP TO SEE FIRST PART OF INSTRUCTIONS)")
+
+
+# TEST CODE:
+
+name = ("Test")
+instructions()
