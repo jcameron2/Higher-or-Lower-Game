@@ -22,7 +22,8 @@ print("HIGHER OR LOWER GAME.")
 
 # Print showing introductions function:
 
-yes_no("Before we start, have you played this game before? y/n: ")
+print()
+print("(PRINTS YES_NO FUNCTION)")
 
 # 'Play again' loop command:
 
@@ -31,4 +32,6 @@ while againtwo in yes:
 
     # Print game loop function on different outcomes:
 
-    againloop(counteragain)
+    print()
+    print("(PRINTS AGAINLOOP FUNCTION)")
+    break
