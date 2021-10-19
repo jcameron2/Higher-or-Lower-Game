@@ -17,7 +17,7 @@ againone = ("yes")
 if guess == x:
     print()
     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
-    print("CORRECT!!! my number was", x, "!!!")
+    print("       CORRECT!!! my number was", x, "!!!       ")
     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
 
 # Counting the amount of wins
