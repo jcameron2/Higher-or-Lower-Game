@@ -3,30 +3,28 @@
 
 counteragain = 0
 mode = '0'
-errorcounter = 0
+errorcounter = -1
 name = ("Test")
-if errorcounter == 0:
-    errorcounter = -1
 
-    # 8. Inputting amount of lives between 1 and 10:
+# 8. Inputting amount of lives between 1 and 10:
 
-    while errorcounter < 1 or errorcounter > 10:
-        try:
+while errorcounter < 1 or errorcounter > 10:
+    try:
+        print()
+        print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
+        errorcounter = int(input("(between 1 to 10): "))
+
+        # Error correction loop:
+
+        if errorcounter < 1 or errorcounter > 10:
             print()
-            print("ENTER YOUR AMOUNT OF LIVES FOR THIS ROUND")
-            errorcounter = int(input("(between 1 to 10): "))
+            print("(INVALID_INPUT FUNCTION)")
 
-            # Error correction loop:
+    # If the user does not input an integer:
 
-            if errorcounter < 1 or errorcounter > 10:
-                print()
-                print("(INVALID_INPUT FUNCTION)")
-
-        # If the user does not input an integer:
-
-        except ValueError:
-            print()
-            print("(ERROR_CORRECTION FUNCTION)")
+    except ValueError:
+        print()
+        print("(ERROR_CORRECTION FUNCTION)")
 
 # Counting amount of total rounds
 # + Identifying the user's selected mode:
