@@ -64,3 +64,18 @@ def end_stats():
 
 
 # -----END OF FUNCTIONS-----
+
+
+# TEST CODE:
+
+counter = 1
+lower = 0
+upper = 1
+name = ("Test")
+counteragain = 8
+counterlist = (1, 2, 3, 4, 5, 6, 7, 8)
+wins = 5
+losses = 3
+totalcounter = 36
+win_outcomes()
+end_stats()
