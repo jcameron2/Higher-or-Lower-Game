@@ -1,55 +1,70 @@
 
-            # 12. If the guess is correct + adds to the amount of total wins:
+# TEST VARIABLES:
 
-                if guess == x:
-                    print()
-                    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
-                    print("CORRECT!!! my number was", x, "!!!")
-                    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
+guess = 50
+x = 50
+wins = 0
+losses = 0
+counterlist = ["n/a"]
+counter = 5
+yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
+no = ['n', 'N', 'no', 'No', 'nO', 'NO']
+errorcounter = 0
+againone = ("yes")
 
-            # Counting the amount of wins
-            # + Activating 'counterlist' as an integer list:
+# 12. If the guess is correct + adds to the amount of total wins:
 
-                    wins = wins + 1
-                    if wins == 1:
-                        counterlist.remove("n/a")
-                    counterlist.append(counter)
+if guess == x:
+    print()
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
+    print("CORRECT!!! my number was", x, "!!!")
+    print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸")
 
-                    # Different win outcomes function:
+# Counting the amount of wins
+# + Activating 'counterlist' as an integer list:
 
-                    win_outcomes()
+    wins = wins + 1
+    if wins == 1:
+        counterlist.remove("n/a")
+    counterlist.append(counter)
 
-                # Command that determines if the user has finished a round:
+    # Different win outcomes function:
 
-                if guess == x or errorcounter == 0 or againone in yes:
+    print()
+    print("(PRINTS WIN_OUTCOMES FUNCTION)")
 
-                    # Showing the amount of wins and losses:
+# Command that determines if the user has finished a round:
 
-                    print()
-                    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
-                    print("Wins:", wins, " | Losses:", losses)
-                    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+if guess == x or errorcounter == 0 or againone in yes:
 
-                    # The 'play again' decision:
+    # Showing the amount of wins and losses:
 
-                    againone = ()
-                    againtwo = ()
-                    while againtwo != 'yes' or againtwo != 'no':
-                        print()
-                        againtwo = input("Would you like to play again? y/n: ")
-                        if againtwo in yes:
-                            break
+    print()
+    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+    print("Wins:", wins, " | Losses:", losses)
+    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
 
-                        # Shows the end game stats function:
+    # The 'play again' decision:
 
-                        elif againtwo in no:
-                            end_stats()
-                            break
+    againone = ()
+    againtwo = ()
+    while againtwo != 'yes' or againtwo != 'no':
+        print()
+        againtwo = input("Would you like to play again? y/n: ")
+        if againtwo in yes:
+            break
 
-                        # One last error correction loop:
+        # Shows the end game stats function:
 
-                        else:
-                            invalid_input()
+        elif againtwo in no:
+            print()
+            print("(PRINTS END_STATS FUNCTION)")
+            break
 
+        # One last error correction loop:
+
+        else:
+            print()
+            print("(INVALID_INPUT FUNCTION)")
 
 # -----END-OF-MAIN-----
