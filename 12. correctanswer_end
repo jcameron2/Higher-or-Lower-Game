@@ -7,6 +7,7 @@ wins = 0
 losses = 0
 counterlist = ["n/a"]
 counter = 5
+totalcounter = 0
 yes = ['y', 'Y', 'yes', 'Yes', 'YEs', 'YES', 'yES', 'yeS', 'yEs', 'YeS']
 no = ['n', 'N', 'no', 'No', 'nO', 'NO']
 errorcounter = 0
@@ -43,6 +44,10 @@ if guess == x or errorcounter == 0 or againone in yes:
     print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
     print("Wins:", wins, " | Losses:", losses)
     print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+
+    # Calculating total amount of guesses:
+
+    totalcounter = totalcounter + counter
 
     # The 'play again' decision:
 
