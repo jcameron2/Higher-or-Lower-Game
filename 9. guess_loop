@@ -2,7 +2,6 @@
 # TEST VARIABLES:
 
 counter = 0
-totalcounter = 0
 lower = 1
 upper = 100
 
@@ -20,7 +19,6 @@ againone = ("no")
 while againone == 'no':
     try:
         detector = 0
-        totalcounter = totalcounter + 1
         counter = counter + 1
         print()
         guess = int(input("Go on, guess my number: "))
