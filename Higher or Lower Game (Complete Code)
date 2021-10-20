@@ -329,7 +329,6 @@ while againtwo in yes:
             while againone in no:
                 try:
                     detector = 0
-                    totalcounter = totalcounter + 1
                     counter = counter + 1
                     print()
                     guess = int(input("Go on, guess my number: "))
@@ -473,7 +472,11 @@ while againtwo in yes:
                     print("Wins:", wins, " | Losses:", losses)
                     print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
 
-                    # The 'play again' decision:
+                    # Calculating total amount of guesses:
+
+                    totalcounter = totalcounter + counter
+
+                    # Breaks all the game loops + the 'play again' decision:
 
                     againone = ()
                     againtwo = ()
