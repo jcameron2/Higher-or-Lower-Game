@@ -346,6 +346,17 @@ while againtwo in yes:
                                 counter = counter - 1
                                 guesslist.remove(finder)
 
+                    # If the inputted integer is not in between the boundaries:
+
+                    if lower <= guess <= upper:
+                        pass
+                    else:
+                        print()
+                        print("You must enter an integer between")
+                        print("the boundaries!!! Try again!")
+                        counter = counter - 1
+                        guesslist.remove(guess)
+
                 # If the user does not input an integer:
 
                 except ValueError:
