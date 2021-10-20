@@ -1,7 +1,6 @@
-
-# 7. Inputting lower and upper boundary commands
-
 import random
+
+# 7. Inputting lower and upper boundary commands:
 
 lower = 1
 upper = 0
@@ -29,16 +28,11 @@ while lower > upper:
         lower = 1
         upper = 0
 
-    # CALCUATING SECRET NUMBER + Entering preferred mode:
+    # CALCULATING SECRET NUMBER:
 
     if lower <= upper:
         print()
         print("¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,")
         print("       Alright. CALCULATING SECRET NUMBER...       ")
         print("`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º")
-        print()
-        print("Now, please ENTER '0' to activate LIMITED MODE or")
-        mode = input("ENTER ANYTHING ELSE to activate INFINITE MODE: ")
-        if mode == '0':
-            print()
-            print("Okay. LIMITED MODE has been activated.")
+     
