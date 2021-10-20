@@ -212,7 +212,7 @@ print()
 print()
 print()
 
-# 6. Import random + list of useful variables and lists for the whole program:
+# 6. List of useful variables and lists for the whole program:
 
 wins = 0
 losses = 0
