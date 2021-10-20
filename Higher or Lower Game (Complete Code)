@@ -246,7 +246,7 @@ while againtwo in yes:
 
     againloop(counteragain)
 
-    # 7. Inputting lower and upper boundary commands
+    # 7. Inputting lower and upper boundary commands:
 
     lower = 1
     upper = 0
@@ -272,13 +272,16 @@ while againtwo in yes:
             lower = 1
             upper = 0
 
-        # CALCUATING SECRET NUMBER + Entering preferred mode:
+        # CALCULATING SECRET NUMBER:
 
         if lower <= upper:
             print()
             print("¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,")
             print("       Alright. CALCULATING SECRET NUMBER...       ")
             print("`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°º¤ø,¸¸,ø¤º")
+
+            # 8. Entering the user's preferred mode:
+
             print()
             print("Now, please ENTER '0' to activate LIMITED MODE or")
             mode = input("ENTER ANYTHING ELSE to activate INFINITE MODE: ")
@@ -286,7 +289,7 @@ while againtwo in yes:
                 print()
                 print("Okay. LIMITED MODE has been activated.")
 
-            # 8. Inputting amount of lives between 1 and 10:
+            # Inputting amount of lives between 1 and 10:
 
                 while errorcounter < 1 or errorcounter > 10:
                     try:
