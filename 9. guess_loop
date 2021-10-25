@@ -33,6 +33,7 @@ while againone == 'no':
                     print()
                     print("You already guessed that!!! Try again!")
                     counter = counter - 1
+                    guess = ()
                     guesslist.remove(finder)
 
 # If the inputted integer is not in between the boundaries:
