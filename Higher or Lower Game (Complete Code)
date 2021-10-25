@@ -364,6 +364,7 @@ while againtwo in yes:
                 except ValueError:
                     error_correction()
                     counter = counter - 1
+                    guess = ()
 
         # 10. Detecting if the guess is valid:
 
