@@ -166,12 +166,12 @@ def end_stats():
     # Prints all calculated end game stats:
 
     print("TOTAL AMOUNT OF GAMES PLAYED:", counteragain)
-    print("TOTAL AMOUNT OF GUESSES MADE:", totalcounter)
+    print("TOTAL AMOUNT OF VALID GUESSES MADE:", totalcounter)
     print("WIN RATE:", (100 / counteragain) * wins, "%")
     print("LOSE RATE:", (100 / counteragain) * losses, "%")
     print("LOWEST/BEST WINNING SCORE:", min(counterlist))
     print("HIGHEST/WORST WINNING SCORE:", max(counterlist))
-    print("MEAN OF GUESSES PER GAME:", totalcounter / counteragain)
+    print("MEAN OF VALID GUESSES PER GAME:", totalcounter / counteragain)
     print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
     print()
     return
