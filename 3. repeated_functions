@@ -9,11 +9,6 @@ def reveal_secret():
     print("Unlucky", name+", my number was", x, "!!!")
     print("๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩๑۞๑,¸¸,ø¤º°`°๑۩")
 
-    # Reveals the round's overall score:
-
-    print()
-    print("ROUND", counteragain, "LOSING SCORE:", counter)
-
     # Error correction loop functions:
 
 
