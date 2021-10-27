@@ -39,7 +39,7 @@ def instructions():
     print("stats are always being calculated and will be shown once you")
     print("have decided to stop playing the game.")
     print()
-    print("Good luck", name+"! (SCROLL UP TO SEE FIRST PART OF INSTRUCTIONS)")
+    print("Good luck", name+"!")
 
 # 2. (STARTING FUNCTIONS) Showing instructions function and creating loop:
 
