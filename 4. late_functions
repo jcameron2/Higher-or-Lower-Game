@@ -4,37 +4,32 @@
 
 def win_outcomes():
 
+    # Prints the user's winning score:
+
+    print()
+    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+    print("ROUND", counteragain, "FINAL WINNING SCORE:", counter)
+    print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
+
     # If it took 1 attempt to guess number correctly:
 
     if counter == 1:
 
+        # If the boundaries are not equal:
+
+        if lower != upper:
+            print()
+            print("WOW!!! I must say you got a bit lucky there", name+".")
+
         # If the boundaries are equal:
 
         if lower == upper:
-            print()
-            print("ROUND", counteragain, "WINNING SCORE:", counter,)
             print()
             print("...that's quite strange.")
             print()
             print("Aha! I see that both of your boundary numbers are equal.")
             print()
             print("You think you're so smart, don't you", name+"?")
-
-        # If the boundaries are not equal:
-
-        elif lower != upper:
-            print()
-            print("ROUND", counteragain, "WINNING SCORE:", counter)
-            print()
-            print("WOW!!! I must say you got a bit lucky there", name+".")
-
-# If it took more than 1 attempt to guess number correctly:
-
-    if counter > 1:
-        print()
-        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
-        print("ROUND", counteragain, "FINAL WINNING SCORE:", counter)
-        print("↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦↦")
 
 # Function that shows end game stats:
 
@@ -61,7 +56,6 @@ def end_stats():
     print("░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█░▒▓█")
     print()
     return
-
 
 # -----END OF FUNCTIONS-----
 
